@@ -28,7 +28,7 @@ jobs:
         with:
           node-version: 20.11.0
           cache: 'npm'
-      - run: npm
+      - run: npm run
       - run: npm run lint
 
   test:
@@ -40,7 +40,7 @@ jobs:
         with:
           node-version: 20.11.0
           cache: 'npm'
-      - run: npm
+      - run: npm run
       - run: npm run test
 
   build:
@@ -58,8 +58,8 @@ jobs:
         with:
           node-version: 20.11.0
           cache: 'npm'
-      - run: npm
-      - run: npm build
+      - run: npm run
+      - run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
